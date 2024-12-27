@@ -172,6 +172,7 @@
       }
     }
     .rotation-slider {
+      height: 18.35rem;
       .info-block {
         top: 42px;
         .card-title {
@@ -182,8 +183,8 @@
         }
       }
 
-      .slider {
-        height: 257px;
+      .rotation-slider__slider {
+        height: 18.35rem;
       }
 
       .slider-controls {
