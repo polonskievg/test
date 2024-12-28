@@ -196,6 +196,11 @@
         }
       }
 
+      .info-block #card-title {
+        margin-top: 0;
+        font-size: 1rem;
+      }
+
       .rotation-slider__slider {
         height: 18.34rem;
       }

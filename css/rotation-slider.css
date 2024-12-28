@@ -118,6 +118,7 @@
     position: absolute;
     width: 5.5rem;
     height: 8.72rem;
+    border-radius: 6px;
   }
 
   .card.left-1 {
