@@ -501,19 +501,19 @@ li::before {
       border-radius: 1rem;
     }
     .item:nth-child(1) .img {
-      background-image: url(/test/img/star-dynamic-premium.png);
+      background-image: url(../img/star-dynamic-premium.png);
       width: 3.65rem;
     }
     .item:nth-child(2) .img {
-      background-image: url(/test/img/explorer-dynamic-premium.png);
+      background-image: url(../img/explorer-dynamic-premium.png);
       width: 3.9rem;
     }
     .item:nth-child(3) .img {
-      background-image: url(/test/img/computer-dynamic-premium.png);
+      background-image: url(../img/computer-dynamic-premium.png);
       width: 4.5rem;
     }
     .item:nth-child(4) .img {
-      background-image: url(/test/img/picture-dynamic-premium.png);
+      background-image: url(../img/picture-dynamic-premium.png);
       width: 6.5rem;
     }
     .item div:nth-child(2) {
@@ -578,7 +578,7 @@ li::before {
       height: 3.8em;
       border-radius: 50%;
       background-color: #ffffff;
-      background-image: url(/test/img/logo.png);
+      background-image: url(../img/logo.png);
       background-position: center;
       background-size: 50%;
       background-repeat: no-repeat;
@@ -603,7 +603,7 @@ li::before {
       left: -0.4rem;
       height: 5.5rem;
       width: 4.3rem;
-      background-image: url(/test/img/pin-dynamic-premium.png);
+      background-image: url(../img/pin-dynamic-premium.png);
     }
   }
 }
@@ -649,7 +649,7 @@ li::before {
       height: 100%;
       border-radius: 20px;
       background-color: rgba(61, 61, 61, 0.33);
-      background-image: url(/test/img/lock-dynamic-premium.png);
+      background-image: url(../img/lock-dynamic-premium.png);
       background-size: 50%;
     }
   }
@@ -706,7 +706,7 @@ li::before {
     align-items: center;
     padding: 1rem;
     background-color: #999999;
-    background-image: url(/test/img/Vector\ 2.png);
+    background-image: url(../img/Vector\ 2.png);
     h3 {
       text-transform: none;
       color: var(--secondary-color);
@@ -736,7 +736,7 @@ li::before {
 #section5 {
   .left-block {
     height: 20rem;
-    background-image: url(/test/img/Vector1.png);
+    background-image: url(../img/Vector1.png);
     .flex-container {
       max-width: 455px;
     }
@@ -914,17 +914,17 @@ li::before {
     border-radius: 20px;
     &:nth-child(1) {
       .for-whom__card__top {
-        background-image: url(/test/img/forWhom1.png);
+        background-image: url(../img/forWhom1.png);
       }
     }
     &:nth-child(2) {
       .for-whom__card__top {
-        background-image: url(/test/img/forWhom2.png);
+        background-image: url(../img/forWhom2.png);
       }
     }
     &:nth-child(3) {
       .for-whom__card__top {
-        background-image: url(/test/img/forWhom3.png);
+        background-image: url(../img/forWhom3.png);
       }
     }
   }
@@ -975,7 +975,7 @@ li::before {
 }
 
 #section9 {
-  background-image: url(/test/img/Vector3.png);
+  background-image: url(../img/Vector3.png);
 }
 
 #section10 {
@@ -1259,7 +1259,7 @@ li::before {
   display: block;
   width: 2rem;
   height: 2rem;
-  background-image: url(/test/img/icon-plus.png);
+  background-image: url(../img/icon-plus.png);
 }
 
 /* Футер */
