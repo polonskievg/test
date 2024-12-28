@@ -163,6 +163,19 @@
   }
 
   #section1 {
+    h4 {
+      font-size: 1rem;
+    }
+    .left-block {
+      gap: 1.2rem;
+    }
+    .right-block {
+      margin-top: 0;
+      height: 30rem;
+    }
+    .content-box {
+      gap: 12px;
+    }
     ul {
       margin-top: 0;
       li {
@@ -172,7 +185,7 @@
       }
     }
     .rotation-slider {
-      height: 18.35rem;
+      height: 18.34rem;
       .info-block {
         top: 42px;
         .card-title {
@@ -184,7 +197,7 @@
       }
 
       .rotation-slider__slider {
-        height: 18.35rem;
+        height: 18.34rem;
       }
 
       .slider-controls {

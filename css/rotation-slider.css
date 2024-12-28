@@ -41,10 +41,11 @@
 .rotation-slider-controls {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   position: absolute;
   top: 6.75rem;
   z-index: 10;
+  padding-inline: 3.5rem;
   button {
     border: none;
     background-color: transparent;
@@ -115,24 +116,27 @@
 @media (max-width: 480px) {
   .card {
     position: absolute;
-    width: 6rem;
-    height: 10rem;
+    width: 5.5rem;
+    height: 8.72rem;
   }
 
   .card.left-1 {
-    transform: translateX(-35px) rotate(-8deg) scale(0.9);
+    transform: translateX(-35px) rotate(-8deg) scale(1);
   }
   .card.left-2 {
-    transform: translateX(-70px) rotate(-12deg) scale(0.8);
+    transform: translate(-72px, 24px) rotate(-9deg) scale(0.9);
   }
   .card.right-1 {
-    transform: translateX(35px) rotate(8deg) scale(0.9);
+    transform: translateX(35px) rotate(8deg) scale(1);
   }
   .card.right-2 {
-    transform: translateX(70px) rotate(12deg) scale(0.8);
+    transform: translate(70px, 24px) rotate(9deg) scale(0.9);
   }
 
   .card.active {
     scale: 1;
+  }
+  .rotation-slider-controls {
+    top: 4.5rem;
   }
 }
