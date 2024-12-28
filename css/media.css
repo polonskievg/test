@@ -353,4 +353,39 @@
       flex-direction: column;
     }
   }
+  #section6 {
+    height: auto;
+    .tabs {
+      height: auto;
+      background-color: transparent;
+      border-radius: 1000px;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .tab {
+      justify-content: start;
+      width: 100%;
+      height: 60px;
+      border-radius: 12px;
+      font-size: 1.2rem;
+    }
+    .tab-content {
+      flex-direction: column;
+    }
+    .content-left {
+      width: 100%;
+    }
+    .btn {
+      display: none;
+    }
+  }
+  #section7 {
+    .right-block {
+      width: 100%;
+    }
+
+    .btn {
+      display: none;
+    }
+  }
 }
