@@ -767,8 +767,11 @@ li::before {
   }
   .lessons {
     gap: 5px;
+    div:first-child {
+      flex: 1;
+    }
     .video-background {
-      max-width: 286px;
+      width: 100%;
       margin-top: 0.3rem;
     }
     p {
@@ -776,9 +779,9 @@ li::before {
     }
   }
   .practice {
+    flex: 1;
     position: relative;
     flex-direction: column;
-    height: 9.4rem;
     padding: 1.1rem;
     p {
       margin-top: 0.7rem;
@@ -869,6 +872,8 @@ li::before {
     width: 370px;
     height: 260px;
     padding: 12px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 
     .course-name {
       padding: 8px 10px;

@@ -52,7 +52,7 @@
 
   .btn {
     width: 100%;
-    padding: 0;
+    padding: 13px 8px;
   }
 
   .section {
@@ -125,6 +125,15 @@
   }
   .section.shape.passage {
     flex-direction: column;
+    padding: 30px 14px;
+    h2 {
+      font-size: 20px;
+      text-align: center;
+    }
+    h3 {
+      text-align: center;
+      font-size: 1rem;
+    }
   }
   .content-box {
     margin-top: 24px;
@@ -327,16 +336,26 @@
     }
     .right-block {
       margin-top: 1.74em;
+      .flex-container {
+        justify-content: center;
+      }
+      .flex-container:nth-child(3) {
+        justify-content: center;
+      }
     }
   }
   #section5 {
     h2 {
       text-align: left;
     }
+    .title {
+      font-weight: bold;
+      margin-top: 0.9rem;
+    }
     h3 {
       font-size: 1.43rem;
       text-align: left;
-      margin-top: 0;
+      margin-top: 0.9rem;
     }
     .left-block {
       height: auto;
@@ -361,8 +380,14 @@
     }
     .lessons {
       flex-direction: column;
+      p {
+        font-size: 1rem;
+      }
     }
     & .practice {
+      p {
+        font-size: 1rem;
+      }
       img {
         width: 3.6rem;
       }
@@ -394,6 +419,8 @@
     .for-whom__card__top {
       width: 280px;
       height: 177px;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
       .course-name {
         font-size: 12px;
       }
@@ -429,8 +456,6 @@
       }
       h3 {
         font-size: 16px;
-      }
-      .links {
       }
       .video-link {
         font-size: 1rem;
