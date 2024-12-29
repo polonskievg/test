@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/media.css" />
     <link rel="stylesheet" href="./css/rotation-slider.css" />
+    <link rel="stylesheet" href="./css/tabs.css" />
     <title>SEO Landing Page</title>
   </head>
 
@@ -437,72 +438,24 @@
         </h2>
         <div class="content-box">
           <div class="tabs">
-            <div class="tab active" data-tab="1">Практика</div>
-            <div class="tab" data-tab="2">Підтримка кураторів</div>
-            <div class="tab" data-tab="3">Працевлаштування</div>
-          </div>
-
-          <div class="tab-content active" id="tab-1">
-            <div class="content-left">
-              <h3>Реальні практичні завдання</h3>
-              <p>
-                Навчання побудоване на основі реальних практичних завдань, які
-                дозволяють студентам швидко стати професіоналами. Пройшовши
-                курс,
-                <b>випускники отримують сертифікат Autodesk</b>, що є визнаним
-                міжнародним знаком якості. 
-              </p>
-              <button class="btn btn-primary">
-                ЗАЛИШИТИ ЗАЯВКУ НА НАВЧАННЯ
+            <div class="tab-buttons">
+              <button class="tab-btn active" data-tab="tab1">
+                Практика
+                <span class="icon-arrow"></span>
               </button>
-            </div>
-            <div class="content-right">
-              <video class="video-background" autoplay muted loop>
-                <source src="./video/1209.mp4" type="video/mp4" />
-                <source src=".your-video.webm" type="video/webm" />
-                Ваш браузер не поддерживает видео.
-              </video>
-            </div>
-          </div>
+              <div class="tab-panel" id="tab1">Контент для Таба 1</div>
 
-          <div class="tab-content" id="tab-2">
-            <div class="content-left">
-              <h3>Підтримка кураторів</h3>
-              <p>
-                Наші студенти отримують підтримку від професійних кураторів на
-                протязі всього періоду навчання.
-              </p>
-              <button class="btn btn-primary">
-                ЗАЛИШИТИ ЗАЯВКУ НА НАВЧАННЯ
+              <button class="tab-btn" data-tab="tab2">
+                Підтримка кураторів
+                <span class="icon-arrow"></span>
               </button>
-            </div>
-            <div class="content-right">
-              <video class="video-background" autoplay muted loop>
-                <source src="./video/1209.mp4" type="video/mp4" />
-                <source src=".your-video.webm" type="video/webm" />
-                Ваш браузер не поддерживает видео.
-              </video>
-            </div>
-          </div>
+              <div class="tab-panel" id="tab2">Контент для Таба 2</div>
 
-          <div class="tab-content" id="tab-3">
-            <div class="content-left">
-              <h3>Працевлаштування</h3>
-              <p>
-                Гарантоване працевлаштування закріплене в договорі. Ви отримаєте
-                повну підтримку HR-спеціаліста та куратора до того моменту, поки
-                ваш дохід не окупить курс у подвійному розмірі
-              </p>
-              <button class="btn btn-primary">
-                ЗАЛИШИТИ ЗАЯВКУ НА НАВЧАННЯ
+              <button class="tab-btn" data-tab="tab3">
+                Працевлаштування
+                <span class="icon-arrow"></span>
               </button>
-            </div>
-            <div class="content-right">
-              <video class="video-background" autoplay muted loop>
-                <source src="./video/1122(1).mp4" type="video/mp4" />
-                <source src=".your-video.webm" type="video/webm" />
-                Ваш браузер не поддерживает видео.
-              </video>
+              <div class="tab-panel" id="tab3">Контент для Таба 3</div>
             </div>
           </div>
         </div>
@@ -1002,7 +955,8 @@
     <footer class="footer">
       <p>© 2024</p>
     </footer>
-    <script src="./script/script.js"></script>
-    <script src="./script/rotation-slider.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/rotation-slider.js"></script>
+    <script src="./js/tabs.js"></script>
   </body>
 </html>

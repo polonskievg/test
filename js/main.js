@@ -29,18 +29,84 @@ function rotateSlider(direction) {
 }
 
 // Tabs
-const tabs = document.querySelectorAll(".tab");
-const tabContents = document.querySelectorAll(".tab-content");
+// const tabs = document.querySelectorAll(".tab");
+// const tabContents = document.querySelectorAll(".tab-content");
 
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    tabs.forEach((t) => t.classList.remove("active"));
-    tabContents.forEach((content) => content.classList.remove("active"));
+// tabs.forEach((tab) => {
+//   tab.addEventListener("click", () => {
+//     tabs.forEach((t) => t.classList.remove("active"));
+//     tabContents.forEach((content) => content.classList.remove("active"));
 
-    tab.classList.add("active");
-    const target = document.getElementById(`tab-${tab.dataset.tab}`);
-    target.classList.add("active");
+//     tab.classList.add("active");
+//     const target = document.getElementById(`tab-${tab.dataset.tab}`);
+//     target.classList.add("active");
+//   });
+// });
+document.addEventListener("DOMContentLoaded", () => {
+  const tabButtons = document.querySelectorAll(".tab-btn");
+  const tabPanels = document.querySelectorAll(".tab-panel");
+  const tabContent = document.querySelector(".tab-content");
+
+  const handleTabSwitch = (button, index) => {
+    // Убираем активные классы
+    tabButtons.forEach((btn) => btn.classList.remove("active"));
+    tabPanels.forEach((panel) => {
+      panel.classList.remove("active");
+      panel.style.maxHeight = "0"; // Скрываем контент плавно
+    });
+
+    // Активируем текущий таб
+    button.classList.add("active");
+
+    // Плавно отображаем активный контент
+    const selectedTab = tabPanels[index];
+    selectedTab.classList.add("active");
+    setTimeout(() => {
+      selectedTab.style.maxHeight = selectedTab.scrollHeight + "px";
+    }, 10);
+  };
+
+  tabButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      const isMobile = window.innerWidth <= 768;
+
+      if (isMobile) {
+        // На мобильных устройствах контент вставляется под кнопками
+        tabPanels.forEach((panel) => {
+          const btn = document.querySelector(`[data-tab="${panel.id}"]`);
+          btn.insertAdjacentElement("afterend", panel);
+        });
+        handleTabSwitch(button, index);
+      } else {
+        // Для десктопов
+        tabPanels.forEach((panel) => tabContent.appendChild(panel));
+        handleTabSwitch(button, index);
+      }
+    });
   });
+
+  // Реакция на изменение размера окна
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+      tabPanels.forEach((panel) => tabContent.appendChild(panel));
+    } else {
+      tabPanels.forEach((panel) => {
+        const button = document.querySelector(`[data-tab="${panel.id}"]`);
+        button.insertAdjacentElement("afterend", panel);
+      });
+    }
+  });
+
+  // Инициализация для правильного отображения
+  const initializeLayout = () => {
+    if (window.innerWidth <= 768) {
+      tabPanels.forEach((panel) => {
+        const button = document.querySelector(`[data-tab="${panel.id}"]`);
+        button.insertAdjacentElement("afterend", panel);
+      });
+    }
+  };
+  initializeLayout();
 });
 
 // Accordion

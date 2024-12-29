@@ -1,0 +1,92 @@
+/* Общие стили */
+.tabs {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tab-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 20px 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 16px;
+  background-color: #efefef;
+  text-align: left;
+  font-size: 1.14rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab-btn:hover {
+  font-weight: bold;
+}
+
+.tab-btn.active {
+  background-color: #e3e3e3;
+  font-weight: bold;
+}
+
+/* Иконка стрелки */
+.icon-arrow {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+.tab-btn.active .icon-arrow {
+  transform: rotate(225deg);
+}
+
+/* Скрытие стрелок на десктопе */
+@media (min-width: 769px) {
+  .icon-arrow {
+    display: none;
+  }
+}
+
+/* Контент табов */
+.tab-panel {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.4s ease, max-height 0.4s ease, transform 0.4s ease;
+}
+
+.tab-panel.active {
+  opacity: 1;
+  max-height: 200px; /* Настраиваемая высота */
+  transform: translateY(0);
+}
+
+/* Десктопная версия */
+@media (min-width: 769px) {
+  .tab-buttons {
+    border-radius: 100px;
+    background-color: #909090;
+    flex-direction: row;
+
+    gap: 0;
+  }
+  .tab-btn {
+    font-weight: normal;
+    justify-content: center;
+    background-color: #909090;
+    border-radius: 100px;
+  }
+}
