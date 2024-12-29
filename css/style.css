@@ -970,6 +970,10 @@ li::before {
 }
 
 #section13 {
+  .title-with-rating {
+    justify-content: space-between;
+    align-items: center;
+  }
   h2 {
     max-width: 829px;
   }

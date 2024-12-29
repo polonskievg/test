@@ -376,6 +376,7 @@
       }
       h4 {
         text-transform: none;
+        max-width: 75%;
       }
     }
     .lessons {
@@ -457,6 +458,10 @@
       h3 {
         font-size: 16px;
       }
+      .links {
+        align-items: start;
+        flex-direction: column;
+      }
       .video-link {
         font-size: 1rem;
         img {
@@ -464,6 +469,15 @@
           height: 40px;
         }
       }
+    }
+  }
+  #section13 {
+    .title-with-rating {
+      flex-direction: column;
+      align-items: start;
+    }
+    .star-rating {
+      margin-top: 1rem;
     }
   }
 }
