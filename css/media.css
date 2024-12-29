@@ -376,4 +376,38 @@
       display: none;
     }
   }
+  #section8.for-whom {
+    .content-box {
+      gap: 12px;
+    }
+    .for-whom__card {
+      height: 370px;
+      width: 280px;
+      border-radius: 12px;
+    }
+    .for-whom__card__top {
+      width: 280px;
+      height: 177px;
+      .course-name {
+        font-size: 12px;
+      }
+      .shape {
+        padding: 6px;
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+    .for-whom__card__bottom {
+      height: 177px;
+      width: 280px;
+      padding: 14px;
+      h3 {
+        font-size: 1.43rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
 }
