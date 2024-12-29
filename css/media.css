@@ -322,6 +322,12 @@
     h3 {
       max-width: 100%;
     }
+    .left-block {
+      height: auto;
+    }
+    .right-block {
+      margin-top: 1.74em;
+    }
   }
   #section5 {
     h2 {
