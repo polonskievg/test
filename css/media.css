@@ -416,4 +416,29 @@
       }
     }
   }
+  #section10 {
+    .you-can__card {
+      width: 280px;
+      height: 373px;
+      .img {
+        width: 252px;
+        height: 143px;
+      }
+      .course {
+        font-size: 10px;
+      }
+      h3 {
+        font-size: 16px;
+      }
+      .links {
+      }
+      .video-link {
+        font-size: 1rem;
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
 }

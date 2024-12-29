@@ -945,6 +945,9 @@ li::before {
       max-width: 100%;
       margin: 16px 0;
     }
+    .links {
+      align-items: center;
+    }
     .video-link {
       display: flex;
       align-items: center;
