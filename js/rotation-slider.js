@@ -56,4 +56,4 @@ function restartAutoPlay() {
 
 // Инициализация
 updateCards();
-// autoPlay();
+autoPlay();

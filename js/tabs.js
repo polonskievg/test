@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const tabButtons = document.querySelectorAll(".tab-btn");
   const tabPanels = document.querySelectorAll(".tab-panel");
 
-  // Функция для плавного появления контента (FadeIn)
+  // Функция для плавного появления контента
   const fadeIn = (element) => {
     element.style.display = "block";
     element.style.opacity = 0;
@@ -25,16 +25,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Обработчик переключения табов
   const handleTabSwitch = (button, index) => {
-    tabButtons.forEach((btn, i) => {
-      const panel = tabPanels[i];
-      if (btn === button) {
-        btn.classList.add("active");
-        fadeIn(panel);
-      } else {
+    const isMobile = window.innerWidth <= 768;
+    const isActive = button.classList.contains("active");
+
+    if (isMobile && isActive) {
+      // На мобильных: если таб активен, закрываем его
+      button.classList.remove("active");
+      hideImmediately(tabPanels[index]);
+    } else {
+      // Убираем активные классы
+      tabButtons.forEach((btn, i) => {
         btn.classList.remove("active");
-        hideImmediately(panel);
-      }
-    });
+        hideImmediately(tabPanels[i]);
+      });
+
+      // Активируем текущий таб
+      button.classList.add("active");
+      fadeIn(tabPanels[index]);
+    }
   };
 
   // Добавление событий на кнопки табов
@@ -49,12 +57,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const isMobile = window.innerWidth <= 768;
 
     tabPanels.forEach((panel) => {
+      const button = document.querySelector(`[data-tab="${panel.id}"]`);
       if (isMobile) {
-        const btn = document.querySelector(`[data-tab="${panel.id}"]`);
-        btn.insertAdjacentElement("afterend", panel);
+        // На мобильных контент размещается сразу после кнопки
+        button.insertAdjacentElement("afterend", panel);
       } else {
+        // На десктопах контент размещается под кнопками
         document.querySelector(".tabs").appendChild(panel);
-        panel.style.display = "block"; // На десктопе панели всегда видны
+      }
+
+      // Показываем активный таб
+      if (panel.classList.contains("active")) {
+        panel.style.display = "block";
+        panel.style.opacity = 1;
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      } else {
+        panel.style.display = "none";
       }
     });
   };

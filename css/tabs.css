@@ -1,7 +1,7 @@
 /* Общие стили */
 .tabs {
-  display: flex;
   width: 100%;
+  display: flex;
   flex-direction: column;
   gap: 10px;
 }
@@ -9,27 +9,23 @@
 .tab-buttons {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
 .tab-btn {
-  flex: 1;
-  padding: 20px 14px;
+  padding: 10px;
   cursor: pointer;
   border: none;
-  border-radius: 16px;
-  background-color: #efefef;
+  background-color: #f9f9f9;
   text-align: left;
-  font-size: 1.14rem;
-  font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: background-color 0.3s ease, color 0.3s ease;
+  width: 100%;
 }
 
 .tab-btn:hover {
-  font-weight: bold;
+  background-color: #eaeaea;
 }
 
 .tab-btn.active {
@@ -49,7 +45,7 @@
 }
 
 .tab-btn.active .icon-arrow {
-  transform: rotate(225deg);
+  transform: rotate(135deg);
 }
 
 /* Скрытие стрелок на десктопе */
@@ -77,16 +73,13 @@
 /* Десктопная версия */
 @media (min-width: 769px) {
   .tab-buttons {
-    border-radius: 100px;
-    background-color: #909090;
     flex-direction: row;
 
-    gap: 0;
   }
+
   .tab-btn {
-    font-weight: normal;
-    justify-content: center;
-    background-color: #909090;
-    border-radius: 100px;
+    width: auto; /* Автоматическая ширина для равномерного распределения */
+    flex: 1; /* Равномерное распределение табов */
+     border-radius: 20px;
   }
 }

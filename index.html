@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/media.css" />
     <link rel="stylesheet" href="./css/rotation-slider.css" />
     <link rel="stylesheet" href="./css/tabs.css" />
+    <link rel="stylesheet" href="./css/content-slider.css" />
     <title>SEO Landing Page</title>
   </head>
 
@@ -100,7 +101,7 @@
                     data-description="Описание 2"
                     data-link="#"
                   >
-                    <img src="./img/Rectangle 1162.jpg" alt="Картинка 2" />
+                    <img src="./img/Rectangle 1162.png" alt="Картинка 2" />
                   </div>
                   <div
                     class="card"
@@ -116,10 +117,7 @@
                     data-description="Описание 4"
                     data-link="#"
                   >
-                    <img
-                      src="./img/666c56677be6bad9fc7a76d7380e5787.jpg"
-                      alt="Картинка 4"
-                    />
+                    <img src="./img/Rectangle 1160.png" alt="Картинка 4" />
                   </div>
                   <div
                     class="card"
@@ -127,10 +125,7 @@
                     data-description="Описание 5"
                     data-link="#"
                   >
-                    <img
-                      src="./img/9235c2b67ad5d05ab03937acf3d705be.jpg"
-                      alt="Картинка 5"
-                    />
+                    <img src="./img/Rectangle 1161.png" alt="Картинка 5" />
                   </div>
                 </div>
               </div>
@@ -298,13 +293,17 @@
           Ми гарантуємо що ви
           <span class="text-with-bg"
             >будете заробляти Х2 від вартості курсу</span
-          >в перші місяці після навчання
+          >
+          в перші місяці після навчання
         </h3>
         <div class="content-box">
-          <div class="left-block shape light-bgc">
-            <div class="slider with-dots" id="slider1">
-              <div class="slider-track-container">
+          <div class="left-block">
+            <div class="content-slider-container with-dots">
+              <div class="slider">
                 <div class="slider-track">
+                  <div class="slide">
+                    <img src="./img/slide 1-1.png" alt="" />
+                  </div>
                   <div class="slide">
                     <img src="./img/slide 1-1.png" alt="" />
                   </div>
@@ -316,8 +315,10 @@
                   </div>
                 </div>
               </div>
-              <button class="slider-btn prev">&lt;</button>
-              <button class="slider-btn next">&gt;</button>
+              <div class="slider-controls">
+                <button class="slider-btn prev" aria-label="Назад">←</button>
+                <button class="slider-btn next" aria-label="Вперед">→</button>
+              </div>
               <div class="slider-dots"></div>
             </div>
           </div>
@@ -433,19 +434,19 @@
           <div class="tabs">
             <div class="tab-buttons">
               <button class="tab-btn active" data-tab="tab1">
-                Практика
+                Таб 1
                 <span class="icon-arrow"></span>
               </button>
-              <div class="tab-panel" id="tab1">Контент для Таба 1</div>
+              <div class="tab-panel active" id="tab1">Контент для Таба 1</div>
 
               <button class="tab-btn" data-tab="tab2">
-                Підтримка кураторів
+                Таб 2
                 <span class="icon-arrow"></span>
               </button>
               <div class="tab-panel" id="tab2">Контент для Таба 2</div>
 
               <button class="tab-btn" data-tab="tab3">
-                Працевлаштування
+                Таб 3
                 <span class="icon-arrow"></span>
               </button>
               <div class="tab-panel" id="tab3">Контент для Таба 3</div>
@@ -690,9 +691,7 @@
       </div>
 
       <div class="section reviews" id="section13">
-        <div
-          class="flex-container title-with-rating"
-        >
+        <div class="flex-container title-with-rating">
           <h2 class="text-left">
             Що кажуть учні після проходження курсу 3D візуалізатор i 3D моделер?
           </h2>
@@ -702,95 +701,52 @@
           </div>
         </div>
         <div class="content-box">
-          <div class="slider with-arrows" id="slider3">
-            <div class="slider-track-container">
+          <div class="content-slider-container with-arrows">
+            <div class="slider">
               <div class="slider-track">
-                <div class="slide">
-                  <div class="slide__content secondary-bgc">
-                    <div class="flex-container align-items-center">
-                      <div class="img">
-                        <img src="./img/Ellipse 8.png" alt="" />
-                      </div>
-                      <div class="text-left">
-                        <div class="name">Yana Chustil</div>
-                        <div class="course">Курс 3Д візуалізації</div>
-                      </div>
+                <div class="slide shape secondary-bgc">
+                  <div class="title">
+                    <div class="photo">
+                      <img src="/img/Ellipse 14.png" alt="" />
                     </div>
-                    <p>
-                      Навчання в Visual360 одне задоволення! <br />
-                      Так, це складна робота , вона має багато нюансів, дрібні
-                      моменти які потрібно вивчити щоб чітко дотримуватися! Але
-                      дякуючи викладачам курсу і техпідтримці з цим теж можна
-                      легко впоратися Все дуже чітко та зрозуміло пояснюють, а
-                      також маючи доступ до відео уроків на рік , можна
-                      абсолютно спокійно переглядати їх за потреби <br />
-                      Я ще не закінчила навчання , але вже дуже багато знаю і
-                      вмію робити , мені дуже подобається ця робота <br />
-                      Я рекомендую всім хто хоче опанувати дану професію,
-                      навчання в Visual360
-                    </p>
+                    <div class="flex-container">
+                      <div class="name">Yana Chustil</div>
+                      <div class="course">Курс 3Д візуалізації</div>
+                    </div>
                   </div>
+                  <p>
+                    Навчання в Visual360 одне задоволення! Так, це складна
+                    робота , вона має багато нюансів, дрібні моменти які
+                    потрібно вивчити щоб чітко дотримуватися! Але дякуючи
+                    викладачам курсу і техпідтримці з цим теж можна легко
+                    впоратися Все дуже чітко та зрозуміло пояснюють, а також
+                    маючи доступ до відео уроків на рік , можна абсолютно
+                    спокійно переглядати їх за потреби Я ще не закінчила
+                    навчання , але вже дуже багато знаю і вмію робити , мені
+                    дуже подобається ця робота Я рекомендую всім хто хоче
+                    опанувати дану професію, навчання в Visual360
+                  </p>
                 </div>
                 <div class="slide">
-                  <div class="slide__content secondary-bgc">
-                    <div class="flex-container align-items-center">
-                      <div class="img">
-                        <img src="./img/Ellipse 8.png" alt="" />
-                      </div>
-                      <div class="text-left">
-                        <div class="name">Yana Chustil</div>
-                        <div class="course">Курс 3Д візуалізації</div>
-                      </div>
-                    </div>
-                    <p>
-                      Навчання в Visual360 одне задоволення! <br />
-                      Так, це складна робота , вона має багато нюансів, дрібні
-                      моменти які потрібно вивчити щоб чітко дотримуватися! Але
-                      дякуючи викладачам курсу і техпідтримці з цим теж можна
-                      легко впоратися Все дуже чітко та зрозуміло пояснюють, а
-                      також маючи доступ до відео уроків на рік , можна
-                      абсолютно спокійно переглядати їх за потреби <br />
-                      Я ще не закінчила навчання , але вже дуже багато знаю і
-                      вмію робити , мені дуже подобається ця робота <br />
-                      Я рекомендую всім хто хоче опанувати дану професію,
-                      навчання в Visual360
-                    </p>
-                  </div>
+                  <h3>Слайд 2</h3>
+                  <p>
+                    Второй слайд с дополнительным текстом. Этот контент должен
+                    корректно отображаться на всех устройствах.
+                  </p>
                 </div>
                 <div class="slide">
-                  <div class="slide__content secondary-bgc">
-                    <div class="flex-container align-items-center">
-                      <div class="img">
-                        <img src="./img/Ellipse 8.png" alt="" />
-                      </div>
-                      <div class="text-left">
-                        <div class="name">Yana Chustil</div>
-                        <div class="course">Курс 3Д візуалізації</div>
-                      </div>
-                    </div>
-                    <p>
-                      Навчання в Visual360 одне задоволення! <br />
-                      Так, це складна робота , вона має багато нюансів, дрібні
-                      моменти які потрібно вивчити щоб чітко дотримуватися! Але
-                      дякуючи викладачам курсу і техпідтримці з цим теж можна
-                      легко впоратися Все дуже чітко та зрозуміло пояснюють, а
-                      також маючи доступ до відео уроків на рік , можна
-                      абсолютно спокійно переглядати їх за потреби <br />
-                      Я ще не закінчила навчання , але вже дуже багато знаю і
-                      вмію робити , мені дуже подобається ця робота <br />
-                      Я рекомендую всім хто хоче опанувати дану професію,
-                      навчання в Visual360
-                    </p>
-                  </div>
+                  <h3>Слайд 3</h3>
+                  <p>
+                    На мобильных устройствах слайдер поддерживает свайпы для
+                    удобства пользователя.
+                  </p>
                 </div>
               </div>
             </div>
-            <button class="slider-btn prev">
-              <img src="./img/slider3Arrow.png" alt="" />
-            </button>
-            <button class="slider-btn next">
-              <img src="./img/slider3Arrow.png" alt="" />
-            </button>
+            <div class="slider-controls">
+              <button class="slider-btn prev" aria-label="Назад">←</button>
+              <button class="slider-btn next" aria-label="Вперед">→</button>
+            </div>
             <div class="slider-dots"></div>
           </div>
         </div>
@@ -951,5 +907,6 @@
     <script src="./js/main.js"></script>
     <script src="./js/rotation-slider.js"></script>
     <script src="./js/tabs.js"></script>
+    <script src="./js/content-slider.js"></script>
   </body>
 </html>

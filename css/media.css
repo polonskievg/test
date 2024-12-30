@@ -55,13 +55,14 @@
     padding: 13px 8px;
   }
 
-  .section {
+  .section,
+  .section.shape.passage {
     flex-direction: column;
   }
 
   #section1 {
     padding-top: 0;
-    margin-top: 59px;
+    margin-top: 56px;
     h4 {
       letter-spacing: normal;
       text-align: center;
@@ -112,6 +113,19 @@
   }
   #section6 {
     padding: 2rem 1rem;
+  }
+
+  #section7 {
+    .content-box {
+      flex-direction: column-reverse;
+    }
+    .privilege__item {
+      align-items: start;
+      font-size: 1rem;
+      span {
+        line-height: 1;
+      }
+    }
   }
 }
 

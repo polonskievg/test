@@ -1,0 +1,144 @@
+/* Общие стили */
+.content-slider-container {
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
+  overflow: visible; /* Чтобы стрелки не обрезались */
+}
+
+.slider {
+  overflow: hidden;
+  height: 100%;
+}
+
+.slider-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex-direction: column;
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  border-radius: 20px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  .title {
+    display: flex;
+    align-items: center;
+    .flex-container {
+      flex-direction: column;
+    }
+    .name {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .course {
+      font-size: 14px;
+      background-color: var(--light-color);
+      padding: 0 5px;
+      border-radius: 100px;
+    }
+  }
+  .photo {
+    margin-right: 10px;
+    img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+.slide h3 {
+  margin-top: 0;
+}
+
+.slide p {
+  margin-bottom: 0;
+}
+
+/* Управление стрелками (класс with-arrows) */
+.with-arrows .slider-controls {
+  display: flex;
+}
+
+.slider-controls {
+  display: none; /* Скрыто, если нет класса with-arrows */
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.slider-controls .slider-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.slider-controls .prev {
+  position: absolute;
+  left: -50px; /* За границей слайдера */
+}
+
+.slider-controls .next {
+  position: absolute;
+  right: -50px; /* За границей слайдера */
+}
+
+/* Точки навигации (класс with-dots) */
+.with-dots .slider-dots {
+  display: flex;
+}
+
+.slider-dots {
+  display: none; /* Скрыто, если нет класса with-dots */
+  justify-content: center;
+  margin-top: 12px;
+  gap: 5px;
+}
+
+.slider-dots div {
+  width: 7px;
+  height: 7px;
+  background-color: #999999;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-dots div.active {
+  background-color: var(--dark-color);
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+  .content-slider-container {
+    width: 100%;
+  }
+
+  .slider-controls {
+    position: static;
+    justify-content: center;
+    transform: none;
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .slider-controls .prev,
+  .slider-controls .next {
+    position: static;
+    left: auto;
+    right: auto;
+  }
+}

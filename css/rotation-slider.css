@@ -122,16 +122,16 @@
   }
 
   .card.left-1 {
-    transform: translateX(-35px) rotate(-8deg) scale(1);
+    transform: translateX(-15vw) rotate(-8deg) scale(1);
   }
   .card.left-2 {
-    transform: translate(-72px, 24px) rotate(-9deg) scale(0.9);
+    transform: translate(-25vw, 15px) rotate(-9deg) scale(0.9);
   }
   .card.right-1 {
-    transform: translateX(35px) rotate(8deg) scale(1);
+    transform: translateX(15vw) rotate(8deg) scale(1);
   }
   .card.right-2 {
-    transform: translate(70px, 24px) rotate(9deg) scale(0.9);
+    transform: translate(25vw, 15px) rotate(9deg) scale(0.9);
   }
 
   .card.active {
