@@ -704,10 +704,6 @@ li::before {
     padding: 0;
   }
 
-  .left-block,
-  .right-block {
-    height: 14.3rem;
-  }
   .right-block {
     flex-direction: column;
     align-items: center;
@@ -957,7 +953,7 @@ li::before {
     .links {
       align-items: center;
     }
-    
+
     .video-link {
       display: flex;
       align-items: center;

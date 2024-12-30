@@ -110,6 +110,13 @@
         float: left;
       }
     }
+    .right-block {
+      .item {
+        :not(:first-child) {
+          margin-left: -10px;
+        }
+      }
+    }
   }
   #section6 {
     padding: 2rem 1rem;
@@ -349,7 +356,6 @@
       height: auto;
     }
     .right-block {
-      margin-top: 1.74em;
       .flex-container {
         justify-content: center;
       }
