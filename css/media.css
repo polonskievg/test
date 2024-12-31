@@ -17,6 +17,10 @@
     flex-direction: column;
   }
 
+  .shape {
+    border-radius: 1rem;
+  }
+
   .content-box.horizontal-scroll {
     flex-direction: row;
     gap: 16px;
@@ -112,7 +116,7 @@
     }
     .right-block {
       .item {
-        :not(:first-child) {
+        &:not(:first-child) {
           margin-left: -10px;
         }
       }
