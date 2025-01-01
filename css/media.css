@@ -10,6 +10,12 @@
 }
 
 @media (max-width: 768px) {
+  .hidden-mobile {
+    display: none;
+  }
+  .visible-mobile {
+    display: flex;
+  }
   main {
     padding: 0 16px;
   }
@@ -62,6 +68,15 @@
   .section,
   .section.shape.passage .flex-container {
     flex-direction: column;
+  }
+
+  #passage2 {
+    background-image: url(../img/map.png);
+    background-size: 130%;
+    background-position: -86px 138px;
+    .btn.visible-mobile {
+      margin-top: 160px;
+    }
   }
 
   #section1 {
@@ -137,6 +152,15 @@
         line-height: 1;
       }
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .hidden-mobile {
+    display: flex;
+  }
+  .visible-mobile {
+    display: none;
   }
 }
 
