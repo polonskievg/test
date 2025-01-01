@@ -238,7 +238,7 @@ li::before {
 .right-block {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  flex-basis: 50%;
   h3 {
     max-width: 100%;
     text-align: left;
@@ -418,7 +418,10 @@ li::before {
   flex-direction: row;
   gap: 1rem;
   .flex-container {
-    flex-direction: column;
+    gap: 18px;
+  }
+  .left-block {
+    flex-basis: 67%;
   }
   h2 {
     font-size: 1.75rem;
@@ -437,10 +440,15 @@ li::before {
   .img {
     display: flex;
     border-radius: 1rem;
-    flex: 0 0 auto;
     width: 100%;
-    max-width: 454px;
+    height: 100%;
     overflow: hidden;
+  }
+}
+
+#passage2 {
+  .right-block {
+    
   }
 }
 
@@ -469,7 +477,7 @@ li::before {
   .left-block {
     display: flex;
     flex-direction: column;
-    width: 48%;
+    flex-basis: 48%;
     gap: 1.4rem;
     & .btn-group {
       margin-top: 3.8rem;
@@ -480,7 +488,7 @@ li::before {
     display: flex;
     flex-direction: column;
     height: 26.65rem;
-    width: 51%;
+    flex-basis: 51%;
     margin-top: 22px;
     .btn-group {
       display: none;

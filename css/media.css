@@ -28,7 +28,7 @@
 
   .left-block,
   .right-block {
-    width: 100%;
+    flex-basis: 100%;
     height: auto;
   }
 
@@ -60,7 +60,7 @@
   }
 
   .section,
-  .section.shape.passage {
+  .section.shape.passage .flex-container {
     flex-direction: column;
   }
 
@@ -79,7 +79,7 @@
     }
     .left-block,
     .right-block {
-      width: 100%;
+      flex-basis: 100%;
     }
 
     .left-block {
@@ -425,6 +425,9 @@
     }
   }
   #section7 {
+    h2 {
+      margin-inline: -5px;
+    }
     .right-block {
       width: 100%;
     }
