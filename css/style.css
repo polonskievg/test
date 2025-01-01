@@ -766,9 +766,9 @@ li::before {
   }
   .lessons {
     gap: 5px;
-    div:nth-last-of-type(1),
-    div:nth-last-of-type() {
+    .flex-container {
       flex: 1;
+      flex-direction: column;
     }
     .video-background {
       width: 100%;
