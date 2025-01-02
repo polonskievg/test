@@ -130,7 +130,19 @@
       }
     }
     .right-block {
+      .flex-container {
+        justify-content: center;
+      }
+      .flex-container:nth-child(3) {
+        justify-content: center;
+      }
       .item {
+        width: 17vw;
+        height: 17vw;
+        max-width: fit-content;
+        max-height: fit-content;
+        border-radius: 50%;
+        overflow: hidden;
         &:not(:first-child) {
           margin-left: -10px;
         }
@@ -382,14 +394,6 @@
     }
     .left-block {
       height: auto;
-    }
-    .right-block {
-      .flex-container {
-        justify-content: center;
-      }
-      .flex-container:nth-child(3) {
-        justify-content: center;
-      }
     }
   }
   #section5 {

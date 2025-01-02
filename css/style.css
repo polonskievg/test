@@ -197,7 +197,6 @@ li::before {
   flex: 1;
   width: 100%;
   margin-top: 2.5rem;
-  gap: 15px;
 }
 
 .bg-img {
@@ -708,6 +707,7 @@ li::before {
   }
   .content-box {
     margin-top: 1.75rem;
+    gap: 15px;
   }
 
   .left-block {
@@ -731,8 +731,10 @@ li::before {
       margin-top: 0.7rem;
     }
     .item {
-      width: 3.95rem;
-      height: 3.95rem;
+      width: 6.387vw;
+      height: 6.387vw;
+      max-width: 79px;
+      max-height: 79px;
       border-radius: 50%;
       overflow: hidden;
       img {
@@ -747,6 +749,9 @@ li::before {
 }
 
 #section5 {
+  .content-box {
+    gap: 15px;
+  }
   .left-block {
     height: 20rem;
     background-image: url(../img/Vector1.png);
@@ -815,6 +820,9 @@ li::before {
   .content-box {
     flex-direction: column;
     align-items: center;
+  }
+  .visible-mobile.btn {
+    margin-top: 0;
   }
 }
 
