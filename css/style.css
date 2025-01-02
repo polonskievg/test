@@ -226,7 +226,6 @@ li::before {
   transform: scaleX(-1);
 }
 
-
 .align-items-center {
   align-items: center;
 }
@@ -448,10 +447,10 @@ li::before {
 }
 
 #passage2 {
-  background-image: url(../img/map.png);
-  background-size: contain;
-  background-position: right;
   .right-block {
+    background-image: url(../img/map.png);
+    background-size: contain;
+    background-position: right;
   }
 }
 

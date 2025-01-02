@@ -9,23 +9,24 @@
 .tab-buttons {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 .tab-btn {
+  height: 60px;
+  border-radius: 0.86rem;
   padding: 10px;
   cursor: pointer;
   border: none;
   background-color: #f9f9f9;
+  font-weight: bold;
+  font-size: 1.143rem;
   text-align: left;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: background-color 0.3s ease, color 0.3s ease;
   width: 100%;
-}
-
-.tab-btn:hover {
-  background-color: #eaeaea;
 }
 
 .tab-btn.active {
@@ -62,11 +63,19 @@
   overflow: hidden;
   transform: translateY(-10px);
   transition: opacity 0.4s ease, max-height 0.4s ease, transform 0.4s ease;
+  h3 {
+    font-size: 1.43rem;
+    text-transform: uppercase;
+    text-align: left;
+  }
+  p {
+    font-size: 1rem;
+  }
 }
 
 .tab-panel.active {
   opacity: 1;
-  max-height: 200px; /* Настраиваемая высота */
+  max-height: 200px;
   transform: translateY(0);
 }
 
@@ -74,12 +83,24 @@
 @media (min-width: 769px) {
   .tab-buttons {
     flex-direction: row;
-
+    border-radius: 100px;
+    background-color: #909090;
+    gap: 0;
   }
 
   .tab-btn {
-    width: auto; /* Автоматическая ширина для равномерного распределения */
-    flex: 1; /* Равномерное распределение табов */
-     border-radius: 20px;
+    width: auto;
+    flex: 1;
+    font-size: 1rem;
+    font-weight: normal;
+    background-color: #909090;
+    justify-content: center;
+    color: var(--light-color);
+    border-radius: 100px;
+  }
+
+  .tab-btn.active {
+    color: #2b2b2b;
+    font-weight: bold;
   }
 }

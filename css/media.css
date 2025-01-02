@@ -11,10 +11,10 @@
 
 @media (max-width: 768px) {
   .hidden-mobile {
-    display: none;
+    display: none !important;
   }
   .visible-mobile {
-    display: flex;
+    display: flex !important;
   }
   main {
     padding: 0 16px;
@@ -71,11 +71,11 @@
   }
 
   #passage2 {
-    background-image: url(../img/map.png);
-    background-size: 130%;
-    background-position: -86px 138px;
-    .btn.visible-mobile {
-      margin-top: 160px;
+    .img {
+      overflow: visible;
+      img {
+        transform: scale(1.4) translateX(-28px);
+      }
     }
   }
 
@@ -157,10 +157,10 @@
 
 @media (min-width: 768px) {
   .hidden-mobile {
-    display: flex;
+    display: flex !important;
   }
   .visible-mobile {
-    display: none;
+    display: none !important;
   }
 }
 
