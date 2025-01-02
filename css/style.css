@@ -982,6 +982,8 @@ li::before {
       font-size: 20px;
       color: var(--dark-color);
       text-decoration: none;
+      border: none;
+      cursor: pointer;
       img {
         height: 56px;
         width: 56px;

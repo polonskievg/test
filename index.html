@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/rotation-slider.css" />
     <link rel="stylesheet" href="./css/tabs.css" />
     <link rel="stylesheet" href="./css/content-slider.css" />
+    <link rel="stylesheet" href="./css/pop-up.css" />
     <title>SEO Landing Page</title>
   </head>
 
@@ -658,10 +659,14 @@
             </div>
             <h3>У 14 років вже заробляє на 3Д візуалізації текст</h3>
             <div class="flex-container links">
-              <a class="video-link" href=""
-                ><img src="./img/icon-video-button.png" alt="" /> Дивитись
-                інтервʼю</a
+              <button
+                class="video-link"
+                onclick="openPopup('https://www.youtube.com/embed/Qb5rXCv2oWM?autoplay=1&modestbranding=1&rel=0&mute=0')"
               >
+                <img src="./img/icon-video-button.png" alt="" /> Дивитись
+                інтервʼю
+              </button>
+
               <a href="">Читати історію Дарʼї</a>
             </div>
           </div>
@@ -982,9 +987,22 @@
     <footer class="footer">
       <p>© 2024</p>
     </footer>
+    <div id="overlay" class="overlay hidden">
+      <div class="popup">
+        <iframe
+          id="youtubeVideo"
+          src=""
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
+        <button class="close-btn" onclick="closePopup()">×</button>
+      </div>
+    </div>
     <script src="./js/main.js"></script>
     <script src="./js/rotation-slider.js"></script>
     <script src="./js/tabs.js"></script>
     <script src="./js/content-slider.js"></script>
+    <script src="./js/pop-up.js"></script>
   </body>
 </html>
