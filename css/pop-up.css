@@ -51,20 +51,15 @@
 }
 
 /* Кнопка закрытия */
-.close-btn {
+.pop-up__close-btn {
   position: absolute;
   top: 5%;
   right: 10%;
-  font-size: 30px;
-  color: var(--text-color);
-  background: var(--primary-color);
   border: none;
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  font-weight: bold;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-image: url(../img/icon-plus.png);
+  transform: rotate(45deg);
 }
