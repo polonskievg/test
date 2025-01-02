@@ -276,7 +276,7 @@ li::before {
 }
 
 .header.hidden {
-  transform: translateY(-200%);
+  transform: translateY(-500%);
 }
 
 .header {

@@ -91,7 +91,7 @@
 
 .slider-controls .prev {
   position: absolute;
-  left: -76px; /* За границей слайдера */
+  left: -7%; /* За границей слайдера */
   img {
     transform: scaleX(-1);
   }
@@ -99,7 +99,7 @@
 
 .slider-controls .next {
   position: absolute;
-  right: -76px; /* За границей слайдера */
+  right: -7%; /* За границей слайдера */
 }
 
 .slider-controls .prev,
