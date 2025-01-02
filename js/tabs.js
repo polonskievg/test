@@ -15,12 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // Функция для мгновенного скрытия контента
+  // Функция для скрытия контента
   const hideImmediately = (element) => {
-    element.style.display = "none";
     element.style.opacity = 0;
     element.style.maxHeight = 0;
-    element.style.transition = "none";
+    element.style.transition = "opacity 0.4s ease, max-height 0.4s ease";
   };
 
   // Обработчик переключения табов
@@ -64,15 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         // На десктопах контент размещается под кнопками
         document.querySelector(".tabs").appendChild(panel);
-      }
-
-      // Показываем активный таб
-      if (panel.classList.contains("active")) {
-        panel.style.display = "block";
-        panel.style.opacity = 1;
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      } else {
-        panel.style.display = "none";
       }
     });
   };
