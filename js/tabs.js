@@ -2,72 +2,74 @@ document.addEventListener("DOMContentLoaded", () => {
   const tabButtons = document.querySelectorAll(".tab-btn");
   const tabPanels = document.querySelectorAll(".tab-panel");
 
-  // Функция для плавного появления контента
-  const fadeIn = (element) => {
-    element.style.display = "block";
-    element.style.opacity = 0;
-    element.style.maxHeight = 0;
-    element.style.transition = "opacity 0.4s ease, max-height 0.4s ease";
-
-    requestAnimationFrame(() => {
-      element.style.opacity = 1;
-      element.style.maxHeight = element.scrollHeight + "px";
-    });
-  };
-
-  // Функция для скрытия контента
-  const hideImmediately = (element) => {
-    element.style.opacity = 0;
-    element.style.maxHeight = 0;
-    element.style.transition = "opacity 0.4s ease, max-height 0.4s ease";
-  };
-
-  // Обработчик переключения табов
-  const handleTabSwitch = (button, index) => {
+  // Переключение табов
+  const switchTab = (button, index) => {
     const isMobile = window.innerWidth <= 768;
-    const isActive = button.classList.contains("active");
 
-    if (isMobile && isActive) {
-      // На мобильных: если таб активен, закрываем его
-      button.classList.remove("active");
-      hideImmediately(tabPanels[index]);
-    } else {
-      // Убираем активные классы
+    // Для мобильных устройств
+    if (isMobile) {
+      const isActive = button.classList.contains("active");
+
+      // Убираем активность со всех табов и скрываем контент
       tabButtons.forEach((btn, i) => {
         btn.classList.remove("active");
-        hideImmediately(tabPanels[i]);
+        tabPanels[i].classList.remove("active");
       });
 
-      // Активируем текущий таб
+      // Если таб неактивен, активируем его
+      if (!isActive) {
+        button.classList.add("active");
+        tabPanels[index].classList.add("active");
+
+        // Перемещаем контент под соответствующую кнопку
+        button.insertAdjacentElement("afterend", tabPanels[index]);
+      }
+    } else {
+      // Для десктопов: активным может быть только один таб
+      tabButtons.forEach((btn, i) => {
+        btn.classList.remove("active");
+        tabPanels[i].classList.remove("active");
+      });
+
       button.classList.add("active");
-      fadeIn(tabPanels[index]);
+      tabPanels[index].classList.add("active");
     }
   };
 
-  // Добавление событий на кнопки табов
-  tabButtons.forEach((button, index) => {
-    button.addEventListener("click", () => {
-      handleTabSwitch(button, index);
-    });
-  });
-
-  // Адаптация на мобильных/десктопах
-  const adjustPanelsForDevice = () => {
+  // Инициализация табов
+  const initializeTabs = () => {
     const isMobile = window.innerWidth <= 768;
 
-    tabPanels.forEach((panel) => {
-      const button = document.querySelector(`[data-tab="${panel.id}"]`);
-      if (isMobile) {
-        // На мобильных контент размещается сразу после кнопки
-        button.insertAdjacentElement("afterend", panel);
-      } else {
-        // На десктопах контент размещается под кнопками
-        document.querySelector(".tabs").appendChild(panel);
-      }
-    });
+    if (isMobile) {
+      // На мобильных устройствах все табы неактивны, контент скрыт
+      tabButtons.forEach((btn) => btn.classList.remove("active"));
+      tabPanels.forEach((panel) => panel.classList.remove("active"));
+    } else {
+      // На десктопах первый таб активен
+      tabButtons.forEach((btn, i) => {
+        if (i === 0) {
+          btn.classList.add("active");
+          tabPanels[i].classList.add("active");
+        } else {
+          btn.classList.remove("active");
+          tabPanels[i].classList.remove("active");
+        }
+      });
+
+      // Перемещаем весь контент в общий блок под табами
+      const tabsContainer = document.querySelector(".tabs");
+      tabPanels.forEach((panel) => tabsContainer.appendChild(panel));
+    }
   };
 
-  // Инициализация
-  adjustPanelsForDevice();
-  window.addEventListener("resize", adjustPanelsForDevice);
+  // Добавляем обработчики для переключения табов
+  tabButtons.forEach((button, index) => {
+    button.addEventListener("click", () => switchTab(button, index));
+  });
+
+  // Инициализация при загрузке
+  initializeTabs();
+
+  // Обновление при изменении ширины экрана
+  window.addEventListener("resize", initializeTabs);
 });
