@@ -62,7 +62,7 @@
 
   .btn {
     width: 100%;
-    padding: 13px 8px;
+    padding: 13px 10px;
   }
 
   .section,
@@ -90,7 +90,7 @@
     }
     .content-box {
       margin-top: 0;
-      padding: 0 12px;
+      padding: 0 12px 18px 12px;
     }
     .left-block,
     .right-block {
@@ -129,12 +129,16 @@
         float: left;
       }
     }
+    .content-box {
+      gap: 23px;
+    }
     .right-block {
       .flex-container {
         justify-content: center;
       }
       .flex-container:nth-child(3) {
         justify-content: center;
+        margin-bottom: 9px;
       }
       .item {
         width: 17vw;
@@ -223,7 +227,7 @@
   }
 
   h3 {
-    font-size: 1rem;
+    font-size: 1.43rem;
     margin: 0;
     max-width: 100%;
   }
@@ -314,7 +318,8 @@
 
   #section2.about-us {
     .content-box {
-      margin-top: 24px;
+      margin-top: 28px;
+      gap: 15px;
     }
     p {
       line-height: 1.2;
@@ -342,7 +347,6 @@
     .slogan {
       margin-top: 29px;
       padding: 12px;
-      height: 126px;
       border-radius: 16px;
       .slogan__icon {
         width: 60px;
@@ -395,7 +399,9 @@
       }
     }
     h3 {
-      max-width: 100%;
+      margin-left: -12px;
+      margin-right: -12px;
+      max-width: 108%;
     }
     .left-block {
       height: auto;
@@ -407,7 +413,13 @@
     }
     .title {
       font-weight: bold;
-      margin-top: 0.9rem;
+      margin-top: 1.9rem;
+      letter-spacing: -0.3px;
+      line-height: 1.2;
+    }
+    .content-box {
+      margin-top: 32px;
+      gap: 20px;
     }
     h3 {
       font-size: 1.43rem;
@@ -416,8 +428,10 @@
     }
     .left-block {
       height: auto;
+      padding: 1.3rem 1rem 2.2rem 1rem;
       img {
-        transform: translateX(-10px);
+        transform: translateX(-8px);
+        width: 3.2rem;
       }
       h3 {
         font-size: 1.43rem;
@@ -427,6 +441,7 @@
         font-size: 1rem;
         text-align: left;
         margin-left: 0;
+        margin-top: 10px;
         li {
           margin-bottom: 0;
         }
@@ -438,8 +453,10 @@
     }
     .lessons {
       flex-direction: column;
+      padding: 1.35rem 1rem;
       p {
         font-size: 1rem;
+        letter-spacing: -0.5px;
       }
     }
     & .practice {
@@ -447,7 +464,9 @@
         font-size: 1rem;
       }
       img {
-        width: 3.6rem;
+        width: 70px;
+        bottom: 3px;
+        right: -3px;
       }
     }
   }

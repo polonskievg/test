@@ -122,8 +122,8 @@
 .slider-dots {
   display: none; /* Скрыто, если нет класса with-dots */
   justify-content: center;
-  margin-top: 12px;
-  gap: 5px;
+  margin-top: 10px;
+  gap: 2px;
 }
 
 .slider-dots div {
