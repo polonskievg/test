@@ -827,6 +827,9 @@ li::before {
 }
 
 #section7 {
+  .content-box {
+    gap: 15px;
+  }
   .privilege {
     margin-top: 1.5rem;
     flex-direction: column;
@@ -989,6 +992,9 @@ li::before {
 }
 
 #section13 {
+  .content-box {
+    width: 87%;
+  }
   .title-with-rating {
     justify-content: space-between;
     align-items: center;
