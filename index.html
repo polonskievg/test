@@ -75,7 +75,7 @@
                 <div class="info-block">
                   <a id="card-link" href="#" target="_blank">Подробнее</a>
                   <div id="card-title">Карточка 3</div>
-                  <p id="card-description">Описание карточки 3</p>
+                  <p id="card-description">опис карточки 3</p>
                 </div>
 
                 <div class="rotation-slider-controls">
@@ -91,7 +91,7 @@
                   <div
                     class="card"
                     data-title="Карточка 1"
-                    data-description="Описание 1"
+                    data-description="опис 1"
                     data-link="#"
                   >
                     <img src="./img/Rectangle 1163.png" alt="Картинка 1" />
@@ -99,7 +99,7 @@
                   <div
                     class="card"
                     data-title="Карточка 2"
-                    data-description="Описание 2"
+                    data-description="опис 2"
                     data-link="#"
                   >
                     <img src="./img/Rectangle 1162.png" alt="Картинка 2" />
@@ -115,7 +115,7 @@
                   <div
                     class="card"
                     data-title="Карточка 4"
-                    data-description="Описание 4"
+                    data-description="опис 4"
                     data-link="#"
                   >
                     <img src="./img/Rectangle 1160.png" alt="Картинка 4" />
@@ -123,7 +123,7 @@
                   <div
                     class="card"
                     data-title="Карточка 5"
-                    data-description="Описание 5"
+                    data-description="опис 5"
                     data-link="#"
                   >
                     <img src="./img/Rectangle 1161.png" alt="Картинка 5" />
@@ -774,6 +774,29 @@
               <!-- <a href="">Читати історію Діани</a> -->
             </div>
           </div>
+          <div class="you-can__card">
+            <div class="img">
+              <img src="./img/cover_youtube4.png" alt="" />
+            </div>
+            <div class="flex-container align-items-center">
+              <div class="name">Діана Петренко</div>
+              <div class="course">Пройшла курс 3Д візуалізації</div>
+            </div>
+            <h3>
+              У 14 років вже заробляє у 3D візуалізації: Історія Діани та її
+              перші 2000 грн на 3D проєктах
+            </h3>
+            <div class="flex-container links">
+              <button
+                class="video-link"
+                onclick="openPopup('https://www.youtube.com/embed/XO2mGqk7Pjw?autoplay=1&modestbranding=1&rel=0&mute=0')"
+              >
+                <img src="./img/icon-video-button.png" alt="" /> Дивитись
+                інтервʼю
+              </button>
+              <!-- <a href="">Читати історію Діани</a> -->
+            </div>
+          </div>
         </div>
         <button class="btn btn-primary">ПРИЄДНАТИСЯ ДО КУРСУ </button>
       </div>
@@ -1162,8 +1185,29 @@
 
     <!-- Футер -->
     <footer class="footer">
-      <p>© 2024</p>
+      <div class="section shape secondary-bgc">
+        <div class="flex-container">
+          <a href="/" class="logo"
+            ><img
+              src="./img/logo.png"
+              alt="Логотип студії Visual 360"
+              loading="lazy"
+          /></a>
+          <nav class="footer__menu">
+            <a href="#">Про Visual 360</a>
+            <a href="#">Відгуки</a>
+            <a href="#">Блог</a>
+          </nav>
+          <nav class="social-media">
+            <a href="#">Instagram</a>
+            <a href="#">TikTik</a>
+            <a href="#">YouTube</a>
+          </nav>
+        </div>
+      </div>
     </footer>
+
+    <!-- Поп-ап -->
     <div id="overlay" class="overlay hidden">
       <div class="popup">
         <iframe

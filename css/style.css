@@ -1095,15 +1095,22 @@ li::before {
 
 /* Футер */
 .footer {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 5rem;
+  .section {
+    padding: 28px 40px;
+  }
+  .logo img {
+    width: 62px;
+  }
+  .flex-container {
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
-.footer p {
-  margin: 0;
+.footer a {
+  font-size: 12px;
+  font-weight: normal;
+  text-decoration: none;
 }
 
 /* Анімаціїї */
