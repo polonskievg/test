@@ -588,4 +588,13 @@
       margin-top: 1rem;
     }
   }
+
+  .footer {
+    .flex-container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+  }
 }
