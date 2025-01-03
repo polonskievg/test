@@ -107,7 +107,18 @@
   }
 
   .tab-panel {
+    display: flex;
+    flex-direction: row;
     order: 2;
     background-color: transparent;
+    transform: translateY(40px);
+    .video-background {
+      object-fit: cover;
+      border-radius: 12px;
+      max-width: 100%;
+    }
+  }
+  .tab-panel.active {
+    padding: 0;
   }
 }
