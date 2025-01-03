@@ -71,6 +71,9 @@
     text-transform: uppercase;
     margin-bottom: 8px;
   }
+  p {
+    font-size: 1rem;
+  }
 }
 
 .tab-panel.active {
@@ -116,6 +119,11 @@
       object-fit: cover;
       border-radius: 12px;
       max-width: 100%;
+    }
+    .left-block {
+      .btn {
+        margin-top: auto;
+      }
     }
   }
   .tab-panel.active {
