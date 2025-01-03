@@ -63,14 +63,19 @@
   transition: opacity 0.4s ease, max-height 0.4s ease, transform 0.4s ease,
     padding 0.5s ease;
   background-color: rgba(203, 203, 203, 0.15);
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
   h3 {
     text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 8px;
   }
 }
 
 .tab-panel.active {
   opacity: 1;
-  max-height: 200px;
+  max-height: 300px;
   padding: 20px 14px;
 }
 
