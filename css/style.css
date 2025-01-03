@@ -939,8 +939,10 @@ li::before {
 
 #section10 {
   .you-can__card {
+    display: flex;
+    flex-direction: column;
     width: 570px;
-    height: 447px;
+    height: auto;
     padding: 1rem;
     background-color: var(--secondary-color);
     border-radius: 1rem;
@@ -965,14 +967,16 @@ li::before {
       justify-content: space-between;
     }
     h3 {
+      font-size: 1rem;
+      font-weight: bold;
       text-transform: uppercase;
-      font-weight: normal;
       text-align: left;
       max-width: 100%;
       margin: 16px 0;
     }
     .links {
       align-items: center;
+      margin-top: auto;
     }
 
     .video-link {
