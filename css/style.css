@@ -446,11 +446,6 @@ li::before {
 }
 
 #passage2 {
-  .right-block {
-    background-image: url(../img/map.png);
-    background-size: contain;
-    background-position: right;
-  }
 }
 
 #section1 {
