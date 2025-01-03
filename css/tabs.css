@@ -75,7 +75,7 @@
 
 .tab-panel.active {
   opacity: 1;
-  max-height: 300px;
+  max-height: 340px;
   padding: 20px 14px;
 }
 
@@ -108,5 +108,6 @@
 
   .tab-panel {
     order: 2;
+    background-color: transparent;
   }
 }
